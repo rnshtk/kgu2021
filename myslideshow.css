@@ -1,0 +1,14 @@
+﻿body{
+    background-color: #ffffaa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+p.no1 {color:black;}
+
+p.no2 {
+    color:red;
+    font-size: larger;
+}
+
+

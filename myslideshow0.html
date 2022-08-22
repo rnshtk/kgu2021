@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<script language="JavaScript">
+    function calendar_1() {
+    var date, month, day, week;
+    var msg_w = new Array(7);
+    
+    holiday = false;
+    msg = "";
+    
+    var msg_d = new Array(12);
+    for (i = 0; i < 12; i++) {
+    var base = new Array(31);
+    for (j = 0; j < 31; j++) {
+    base[j] = "";
+    }
+    msg_d[i] = base;
+    }
+    
+    date = new Date();
+    month = date.getMonth();
+    day = date.getDate();
+    week = date.getDay();
+    
+    msg_w[0] = " （日曜日）";
+    msg_w[1] = " （月曜日）";
+    msg_w[2] = " （火曜日）";
+    msg_w[3] = " （水曜日）";
+    msg_w[4] = " （木曜日）";
+    msg_w[5] = " （金曜日）";
+    msg_w[6] = " （土曜日）";
+    
+    document.write((month+1) + "月" + day + "日" );
+    if ((week == 0) || (holiday)) {
+    document.write("<font color=#FF0000>");
+    }
+    else if (week == 6) {
+    document.write("<font color=#0000ff>");
+    }
+    else {
+    document.write("<font color=#000000>");
+    }
+    document.write(msg_w[week]);
+    document.write("</font>");
+    }
+</script>
+<title>♪オーケストラの魅力♪</title>
+<link rel="stylesheet" href="myslideshow.css">
+</head>
+
+<body>
+<script language="JavaScript">
+    calendar_1();
+</script>
+<h1>♪オーケストラの魅力♪</h1>
+<img src="myimg/pic0.jpg"><br>
+<p>オーケストラの概要と魅力をこれからスライドショーで簡単にご紹介したいと思います！</p><br>
+<a href="myslideshow.html">スタート！</a>
+</body>
+</html>
